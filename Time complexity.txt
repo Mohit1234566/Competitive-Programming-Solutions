@@ -1,0 +1,160 @@
+Complexities:
+
+For 10^8 time complexity takes
+=> (no. of operation)/10^8
+
+10^8 =1sec, use int
+
+more than 10^8 then use long long int
+
+1. for(i=1; i<=n; i++)
+ {
+  statement...
+  } 
+  =>    0(n)
+
+2. for(i=n; i >0;i --)
+{
+statement..
+}
+ => 0(n)
+3. for(i=1; i<=n; i=i+2)
+{
+statement...
+}
+=> 0(n)
+4. for(i=1; i*i<=n; i++)
+{
+statement..
+}
+=> 0(sqrt(n))
+
+5. for(i=1; i<=n; i++)
+ {
+for(i=1; i<=n; i++)
+ { statement...
+}
+}
+=> 0(n*n)
+
+6. for(i=1; i<=n; i=i*2)
+{
+statement...
+}
+=> 0(log n)
+
+7. for(i=1; i<=n; i=i/3)
+{
+statement..
+}
+=> 0(log n)
+
+Constraints 					Time complexity
+
+1<=N<=10^18					O(log N)
+
+1<=N<=10^8					O(N)
+
+1<=N<=10^7					O(Nlog N)
+
+1<=N<=10^4					O(N^2)
+
+1<=N<=500					O(N^3)
+
+1<=N<=90					O(N^4)
+
+1<=N<=20					O(2*N)
+
+1<=N<=10					O(N!)
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+All about competitive programming
+
+1.finding unique elements from a string
+
+int n=unique(s.begin(), s.end())-s.begin();
+
+2. getting maximum element from a string
+
+cout<<*max_element(s.begin(), s.end())<<endl;
+
+3. getting minimum element from a string
+
+cout<<*min_element(s.begin(), s.end())<<endl;
+
+4.deleting a substr from a string
+
+s.erase(s.begin()+3,s.begin()+6);
+///////////////////////////////
+s1.substr(1, 3); 
+/////////////////////////////////
+ returns a value < 0 (s1 is smaller then s2) 
+    if((s1.compare(s2)) < 0) 
+        cout << s1 << " is smaller than " << s2 << endl; 
+
+5.find a substring inside a string
+
+if(s.find("asd")!=-1)
+cout<<"substring found"<<endl;
+
+6. reverse a string and check palindrome
+reverse(s.begin(),s.end());
+
+7. Check if the no is even or odd
+if(n&1)
+cout<<"odd";
+else
+cout<<"even";
+
+8. fast multiplication & division
+n=n<<1;
+n=n>>1;
+
+9. Swapping 2nos.
+a^=b;
+b^=a;
+a^=b;
+
+10. avoid using strlen()
+for(int i=0;s[i];i++)
+
+11. GCD
+
+__gcd(a,b);
+
+__builtin_popcount(n); -set bit count:
+__builtin_parity(n); -check parity
+__builtin_clz(n); -count leading zeros
+__builtin_ctz(n) -count trailing zeros
+
+12. maximum size of array is 10^6. i.e; we have to 
+define array size to 10^7;
+
+13. Calculating MSB
+let double k=log10(N);
+k=k-floor(k);
+int x=pow(10,k);
+x is msb.
+
+14. Calculate no. of digits
+N=floor(log10(N))+1;
+
+15. power of 2 check
+bool ispower(int x)
+{
+return x&&(!(x&(x-1)));
+}
+
+16. copy elements of array from one container to other
+int arr[5]={1,5,6,4,8,2};
+int arr2[5];
+copy_n(arr,5,arr2);
+ copy(ar1.begin(), ar1.end(), inserter(ar,ptr)); 
+where ar is array and ptr is iterator
+
+17. use of 'and' & 'or'
+
+18. integer to binary  
+string binary = bitset<8>(8).to_string();
